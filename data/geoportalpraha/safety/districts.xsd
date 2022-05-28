@@ -1,0 +1,25 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<schema xmlns:fme="http://www.safe.com/gml/fme" xmlns:xlink="http://www.w3.org/1999/xlink" xmlns:gml="http://www.opengis.net/gml" xmlns="http://www.w3.org/2001/XMLSchema" targetNamespace="http://www.safe.com/gml/fme" elementFormDefault="qualified">
+<import namespace="http://www.opengis.net/gml" schemaLocation="http://schemas.opengis.net/gml/3.1.1/base/gml.xsd"/>
+<element name="BEZ_OkrskyMPP_p" type="fme:BEZ_OkrskyMPP_pType" substitutionGroup="gml:_Feature"/>
+<complexType name="BEZ_OkrskyMPP_pType">
+<complexContent>
+<extension base="gml:AbstractFeatureType">
+<sequence>
+<element name="OBJECTID" minOccurs="0" type="int"/>
+<element name="OKRSEK" minOccurs="0">
+<simpleType>
+<restriction base="string">
+<maxLength value="50"/>
+</restriction>
+</simpleType></element>
+<element name="MC_PRAHA" minOccurs="0" type="int"/>
+<element name="Shape_Length" minOccurs="0" type="double"/>
+<element name="Shape_Area" minOccurs="0" type="double"/>
+<element ref="gml:surfaceProperty" minOccurs="0"/>
+<element ref="gml:multiSurfaceProperty" minOccurs="0"/>
+</sequence>
+</extension>
+</complexContent>
+</complexType>
+</schema>
