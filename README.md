@@ -16,6 +16,8 @@ python collect_data.py
 ## Output files
 Output files are generated in the root directory with the *.json* extension. The name of the generated file is the same as its source folder. 
 
+You can find generated files here https://drive.google.com/drive/folders/1NlX503LKtZ8uvWj8Chjw-l8NpsZVYQAB?usp=sharing
+
 ### Data Sources
 Noise: 
 
