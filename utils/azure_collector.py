@@ -23,7 +23,7 @@ UNPLEASANT_LIVING_RISK_CATEGORIES = set(['Graffiti', 'Air Pollution Control', 'C
                                 'Standing Water'
                                 ])
 
-START_DATE = '2018-05-01'
+START_DATE = '2015-05-01'
 END_DATE = '2022-01-01'
 
 
@@ -50,13 +50,15 @@ def collect_azure_coordinates(datasets, type = 'ULR'):
 
 
 
-def collectULRCoordinates(dataset):
+def collectULRCoordinates(dataset, limit=1000000):
     """
     """
     coordinates = set()
     for index, row in dataset.iterrows():
         if row['category'] in UNPLEASANT_LIVING_RISK_CATEGORIES:
             coordinates.add("{} {}".format(row['latitude'], row['longitude']))
+        if(len(coordinates) > limit):
+            break
     return coordinates
 
 
