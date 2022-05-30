@@ -18,8 +18,8 @@ def generate_jsonfile(name: str, coordinates: set, color = "red", radius = 1, in
         else:
             final_json.write(",\n")
         final_json.write("\t\t{\n")
-        final_json.write("\t\t\t\"long\": {},\n".format(coor.split(' ')[0]))
-        final_json.write("\t\t\t\"lat\": {},\n".format(coor.split(' ')[1]))
+        final_json.write("\t\t\t\"lat\": {},\n".format(coor.split(' ')[0]))
+        final_json.write("\t\t\t\"long\": {},\n".format(coor.split(' ')[1]))
         final_json.write("\t\t\t\"radius\": {},\n".format(radius))
         final_json.write("\t\t\t\"intensity\": {}\n".format(intensity))
         final_json.write("\t\t}")
