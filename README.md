@@ -34,5 +34,9 @@ Safety:
 Bad Atmosphere:
  - https://www.geoportalpraha.cz/en/data/opendata/5BB4E2C5-9D4B-4B2B-BF0A-E0B98EE6013A
 
-ToDo
- - https://docs.microsoft.com/en-us/azure/open-datasets/dataset-catalog ( Taxi locations, Genomics Data Lake or US Population by Country 
+Unpleasant Living threats, collected from
+ - Boston Safety: https://docs.microsoft.com/en-us/azure/open-datasets/dataset-boston-safety?tabs=azureml-opendatasets
+ - Chicago Safety: https://docs.microsoft.com/en-us/azure/open-datasets/dataset-chicago-safety?tabs=azureml-opendatasets
+ - San Francisco Safety: https://docs.microsoft.com/en-us/azure/open-datasets/dataset-san-francisco-safety?tabs=azureml-opendatasets
+ - Nyc Safety: https://docs.microsoft.com/en-us/azure/open-datasets/dataset-new-york-city-safety?tabs=azureml-opendatasets
+ - Seattle Safety (not used): https://docs.microsoft.com/en-us/azure/open-datasets/dataset-seattle-safety?tabs=azureml-opendatasets

@@ -23,7 +23,7 @@ UNPLEASANT_LIVING_RISK_CATEGORIES = set(['Graffiti', 'Air Pollution Control', 'C
                                 'Standing Water'
                                 ])
 
-START_DATE = '20218-05-01'
+START_DATE = '2018-05-01'
 END_DATE = '2022-01-01'
 
 
