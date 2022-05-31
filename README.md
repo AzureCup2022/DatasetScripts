@@ -7,16 +7,39 @@ Data collector of Azure Cup Locato Project. The output format is the json with p
 ```
 
 ## Usage
-Specify arguments (elments of list of folders in ./data/geoportalpraha you want to be processed). Collect the data by running the shell command
+  1. Collect data about the prague from geoportalpraha source
 
-```sh
-python collect_data.py
-```
+        Specify arguments (elments of list of folders in ./data/geoportalpraha you want to be processed). Collect the data by running the shell command
+
+        ```sh
+        python collect_data.py
+        ```
+   1. Train the model of Unpleasant living risk area based on the azure datasets - run it with arguments that you want
+
+        ```sh
+        python train_living_risks.py
+        ```
+
+   1. Predict the city of Unpleasant living risk area based on the azure datasets - run it with arguments that you want
+
+        ```sh
+        python predict_living_risks.py
+        ```
+## ULR - Unpleasant Living Risks models
+
+We train the model that looks like this:
+
+![model](./docs/ulr_model.jpg)
+
+that the features are images of map from azure map screenshots gets via azure api
+
+![model](docs/gold_imgs.png)
+
+and the gold data are used from the azure datasets of safety of New York City
 
 ## Output files
 Output files are generated in the root directory with the *.json* extension. The name of the generated file is the same as its source folder. 
 
-You can find generated files here https://drive.google.com/drive/folders/1NlX503LKtZ8uvWj8Chjw-l8NpsZVYQAB?usp=sharing
 
 ### Data Sources
 Noise: 
