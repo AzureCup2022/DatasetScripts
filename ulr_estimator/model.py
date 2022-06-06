@@ -8,13 +8,13 @@ class ulr_model:
 
     def __init__(self):
         self.model = models.Sequential()
-        self.model.add(layers.Conv2D(32, (3, 3), activation='relu', input_shape=(700, 700, 3)))
+        self.model.add(layers.Conv2D(16, (3, 3), activation='relu', input_shape=(700, 700, 4)))
         self.model.add(layers.MaxPooling2D((2, 2)))
-        self.model.add(layers.Conv2D(64, (3, 3), activation='relu'))
+        self.model.add(layers.Conv2D(32, (3, 3), activation='relu'))
         self.model.add(layers.MaxPooling2D((2, 2)))
-        self.model.add(layers.Conv2D(64, (3, 3), activation='relu'))
+        self.model.add(layers.Conv2D(32, (3, 3), activation='relu'))
         self.model.add(layers.Flatten())
-        self.model.add(layers.Dense(64, activation='relu'))
+        self.model.add(layers.Dense(32, activation='relu'))
         self.model.add(layers.Dense(2, activation='softmax'))
 
         self.model.summary()
@@ -24,7 +24,7 @@ class ulr_model:
               metrics=['accuracy'])
 
 
-    def train(self, X_imgs, X_labels, Y_imgs, Y_labels, epochs=100):
+    def train(self, X_imgs, X_labels, Y_imgs, Y_labels, epochs=10):
         self.history = self.model.fit(X_imgs, X_labels, epochs=epochs, 
                             validation_data=(Y_imgs, Y_labels))
 
